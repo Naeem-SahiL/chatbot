@@ -1,5 +1,15 @@
 <!-- src/app/chat/chat.component.html -->
 <div class="chat-container">
+  <div class="header">
+    <div class="text-container">
+      <h2>Chat Bot</h2>
+    </div>
+    <div class="button-container">
+      <button mat-icon-button color="primary" (click)="logout()">
+        <mat-icon fontIcon="exit_to_app">home</mat-icon>
+      </button>
+    </div>
+  </div>
   <div class="messages">
     <div *ngFor="let message of messages" class="message">
       {{ message }}
