@@ -1,0 +1,44 @@
+<div
+      class="sticky top-0 juice:p-3 mb-1.5 flex items-center justify-between z-10 h-14 p-2 font-semibold bg-token-main-surface-primary bg-[#fff] dark:bg-[#212121]" >
+      <div class="absolute start-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2"></div>
+      <div class="flex items-center gap-2 overflow-hidden juice:gap-0">
+
+        <div type="button" id="radix-:r5b:" aria-haspopup="menu" aria-expanded="false" data-state="closed"
+          class="group flex cursor-pointer items-center gap-1 rounded-xl py-2 px-3 text-lg font-semibold hover:bg-token-main-surface-secondary radix-state-open:bg-token-main-surface-secondary juice:text-token-text-secondary juice:rounded-lg juice:py-1.5 overflow-hidden whitespace-nowrap">
+          <div class="juice:text-token-text-secondary">ChatBot <span class="text-token-text-secondary"></span></div>
+
+        </div>
+      </div>
+      <div class="flex gap-2 pr-1 justify-center items-center">
+
+        <button appThemeToggle data-testid="fruit-juice-profile"
+          class="flex h-10 w-10 items-center justify-center rounded-full  hover:bg-token-main-surface-secondary focus-visible:bg-token-main-surface-secondary focus-visible:outline-0"
+          type="button" id="theme-toggle" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <div class="flex items-center justify-center overflow-hidden rounded-full">
+            <div class="relative flex ">
+              <mat-icon fontIcon="light_mode" class=" dark:text-white "></mat-icon> <span class="sr-only"></span>
+              </div>
+          </div>
+        </button>
+
+        <button data-testid="fruit-juice-profile"
+          class="flex h-10 w-10 justify-center rounded-full hover:bg-token-main-surface-secondary focus-visible:bg-token-main-surface-secondary focus-visible:outline-0"
+          type="button" id="radix-:r5d:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <div class="flex items-center justify-center overflow-hidden rounded-full">
+            <div class="relative flex"><img alt="User" referrerpolicy="no-referrer" loading="lazy" width="32" height="32"
+                decoding="async" data-nimg="1" class="rounded-sm"
+                src="https://lh3.googleusercontent.com/a/AEdFTp6VwlIBdaC7ekGaP1cm3vX1ltYBrpmpgSM9JKWz8g=s96-c"
+                style="color: transparent;"></div>
+          </div>
+        </button>
+        <button *ngIf="isLoggedIn" data-testid="fruit-juice-profile" (click)="logout()"
+          class="flex h-10 w-10 items-center justify-center rounded-full  hover:bg-token-main-surface-secondary focus-visible:bg-token-main-surface-secondary focus-visible:outline-0"
+          type="button" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <div class="flex items-center justify-center overflow-hidden rounded-full">
+            <div class="relative flex ">
+              <mat-icon fontIcon="exit_to_app" class=" dark:text-white "></mat-icon> <span class="sr-only"></span>
+              </div>
+          </div>
+        </button>
+      </div>
+    </div>

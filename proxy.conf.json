@@ -1,0 +1,13 @@
+{
+  "/api": {
+    "target": "https://91a7-34-168-194-124.ngrok-free.app",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": "/promptHandling"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
