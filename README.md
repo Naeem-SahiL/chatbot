@@ -1,26 +1,27 @@
 # CodeMap
 
-This repository contains the code and data for querying and retrieving datasets using provided Colab notebooks. Additionally, a front-end (FE) project is included for interaction.
+This repository includes code and data for querying and managing datasets using Colab notebooks. Additionally, it features a front-end project for user interaction.
 
 ## Repository Contents
-FE with aditional folder of Colab Resources which contains
 
-- `model_Training_(2).ipynb`: Colab notebook for training the model and querying data.
-- `DatasetRetrievel.ipynb`: Colab notebook script for retrieving and uploading data.
-- `feature_dataset(1).json`: Front-end project folder.
+- **Colab Notebooks:**
+  - `model_Training.ipynb`: Notebook for training models and querying data.
+  - `DatasetRetrievel.ipynb`: Notebook for uploading and retrieving datasets.
 
 ## Getting Started
 
 ### Prerequisites
 
+Ensure you have the following installed:
+
 - Google Colab or Jupyter Notebook
-- Node.js (version 20 or above)
-- Angular (version 18 or above)
+- Node.js (version 20 or higher)
+- Angular (version 18 or higher)
 - Ngrok account for tunneling
 
 ### Cloning the Repository
 
-Clone the repository using the following command:
+Clone the repository using:
 
 ```bash
 git clone <repository_url>
@@ -29,29 +30,28 @@ cd <repository_directory>
 
 ## Using the Colab Notebooks
 
-### 1. Model Training Notebook
+### 1. Model Training Notebook (`model_Training.ipynb`)
 
-Open the `Model_Training_(2).ipynb` notebook in Google Colab or Jupyter Notebook. This notebook contains the code for indexing data and using the model to query this data.
+Open this notebook in Google Colab or Jupyter Notebook to index data and execute model queries.
 
-**Running the Notebook:** Follow the instructions within the notebook cells to execute the code.
+**Running the Notebook:**
+- Use provided data or upload your own.
+- Follow instructions within the notebook.
 
-- **Using Provided Data:** If you want to use the data provided in the repository, follow the instructions as-is.
-- **Using Custom Data:** If you want to use your own data, upload your dataset and adjust the code accordingly to point to your data files.
+### 2. Dataset Retrieval Notebook (`DatasetRetrievel.ipynb`)
 
-### 2. Dataset Retrieval Notebook (only for custom data)
+Use this notebook for uploading and retrieving custom datasets.
 
-Open the `DatasetRetrievel.ipynb` notebook in Google Colab or Jupyter Notebook. This notebook is used for uploading your own data and retrieving datasets.
+**Running the Notebook:**
+- Follow instructions for data upload and retrieval.
 
-**Running the Notebook:** Follow the instructions within the notebook cells to execute the code for data retrieval.
-- **Using Custom Data:** If you want to upload and use your own data, follow the instructions in the notebook to upload your dataset and adjust the code accordingly.
+## Setting Up the Front-End Project
 
-## Front-End Project Setup
-
-The front-end project is located in the `CodeMap_Chat_FE` folder. To set up and run the front-end:
+Navigate to `CodeMap_Chat_FE` for the front-end setup:
 
 ### 1. Configuration
 
-Edit the `proxy.config.json` file in the `CodeMap_Chat_FE` folder. Replace the `target` value with the ngrok link provided at the end of the Colab notebook:
+Edit `proxy.config.json` and replace the `target` with your Ngrok link:
 
 ```json
 {
@@ -66,9 +66,10 @@ Edit the `proxy.config.json` file in the `CodeMap_Chat_FE` folder. Replace the `
   }
 }
 ```
+
 ### 2. Install Dependencies
 
-Navigate to the `CodeMap_Chat_FE` folder and install the required dependencies:
+Install dependencies for the front-end project:
 
 ```bash
 cd CodeMap_Chat_FE
@@ -77,9 +78,8 @@ npm install
 
 ### 3. Run the Front-End
 
-Start the front-end project using the following command:
+Start the front-end project:
 
 ```bash
-npm run
+npm start
 ```
-
