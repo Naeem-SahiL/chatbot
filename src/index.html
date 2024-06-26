@@ -8,7 +8,34 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="dark:bg-[#212121] bg-[#fff]">
+
   <app-root></app-root>
 </body>
+<script>
+  const theme = localStorage.getItem('theme');
+  const browserDark = window.matchMedia('(prefers-color-scheme: dark)').matches;if (theme !== null) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  } else if (browserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+
+  var themeToggleBtn = document.getElementById('theme-toggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+      if (document.documentElement.classList.contains('dark')) {
+        setTheme('light');
+      } else {
+        setTheme('dark');
+      }
+    });
+  }
+  function setTheme(theme) {
+      localStorage.setItem('theme', theme);
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    }
+</script>
 </html>

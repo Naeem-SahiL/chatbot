@@ -1,37 +1,33 @@
-// src/app/chat/chat.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ChatapiService } from '../services/chatapi.service';
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
+  selector: 'app-chatui',
+  templateUrl: './chatui.component.html',
+  styleUrl: './chatui.component.css'
 })
-export class ChatComponent implements OnInit {
-
-  messages: any[] = [];
-  newMessage: string = '';
-  userName = 'Sahil';
-
+export class ChatuiComponent {
   constructor(
     private router: Router,
     private authService: AuthService,
     private chatApiservice: ChatapiService
+  ) { }
 
-    ){}
 
-  // implement init here
-  ngOnInit(){
-    // check if user is logged in
-    let user = this.authService.getUser();
-    console.log(user);
-    this.userName = user?.email || 'Sahil';
-    // if not, redirect to login
-    // if logged in, do nothing
+  messages: any[] = [
 
-  }
+    {
+      text: 'Hello, How can I help you?',
+      sender: 'bot',
+    },
+
+
+
+  ];
+  newMessage: string = '';
+  userName = 'Sahil';
 
   sendMessage() {
 
@@ -42,14 +38,20 @@ export class ChatComponent implements OnInit {
         sender: 'user',
       });
 
+      this.messages.push({
+        text: 'Thinking...',
+        sender: 'bot',
+      });
+
     }
 
     this.chatApiservice.getChatApiResponse(this.newMessage).subscribe((response) => {
       console.log(response);
-      this.messages.push({
-        text: response.message,
-        sender: 'bot',
-      });
+      this.messages[this.messages.length - 1].text = response.message;
+      // this.messages.push({
+      //   text: response.message,
+      //   sender: 'bot',
+      // });
     });
     this.newMessage = '';
   }
@@ -73,7 +75,4 @@ export class ChatComponent implements OnInit {
     textarea.style.height = `${textarea.scrollHeight}px`;
   }
 
-  logout() {
-    this.router.navigate(['/']);
-  }
 }
