@@ -3,10 +3,11 @@
 This repository contains the code and data for querying and retrieving datasets using provided Colab notebooks. Additionally, a front-end (FE) project is included for interaction.
 
 ## Repository Contents
+FE with aditional folder of Colab Resources which contains
 
-- `Model_Training_(2).ipynb`: Colab notebook for training the model and querying data.
+- `model_Training_(2).ipynb`: Colab notebook for training the model and querying data.
 - `DatasetRetrievel.ipynb`: Colab notebook script for retrieving and uploading data.
-- `CodeMap_Chat_FE`: Front-end project folder.
+- `feature_dataset(1).json`: Front-end project folder.
 
 ## Getting Started
 
@@ -30,15 +31,19 @@ cd <repository_directory>
 
 ### 1. Model Training Notebook
 
-Open the `Model_Training_(2).ipynb` notebook in Google Colab or Jupyter Notebook. This notebook contains the code for training the model and querying the data.
+Open the `Model_Training_(2).ipynb` notebook in Google Colab or Jupyter Notebook. This notebook contains the code for indexing data and using the model to query this data.
 
 **Running the Notebook:** Follow the instructions within the notebook cells to execute the code.
 
-### 2. Dataset Retrieval Notebook
+- **Using Provided Data:** If you want to use the data provided in the repository, follow the instructions as-is.
+- **Using Custom Data:** If you want to use your own data, upload your dataset and adjust the code accordingly to point to your data files.
+
+### 2. Dataset Retrieval Notebook (only for custom data)
 
 Open the `DatasetRetrievel.ipynb` notebook in Google Colab or Jupyter Notebook. This notebook is used for uploading your own data and retrieving datasets.
 
 **Running the Notebook:** Follow the instructions within the notebook cells to execute the code for data retrieval.
+- **Using Custom Data:** If you want to upload and use your own data, follow the instructions in the notebook to upload your dataset and adjust the code accordingly.
 
 ## Front-End Project Setup
 
